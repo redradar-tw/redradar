@@ -8,76 +8,95 @@
     <style>
         .radar-ping::after {
             content: ''; position: absolute; width: 100%; height: 100%;
-            border: 2px solid #ef4444; border-radius: 50%;
+            border: 2px solid #dc2626; border-radius: 50%;
             animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite; opacity: 0;
         }
         @keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } 0% { transform: scale(1); opacity: 0.5; } }
     </style>
 </head>
-<body class="bg-black text-gray-100 font-sans">
+<body class="bg-gray-50 text-slate-800 font-sans leading-relaxed">
 
-    <nav class="border-b border-red-900 bg-gray-900 p-4 sticky top-0 z-50">
+    <nav class="bg-slate-900 p-4 sticky top-0 z-50 shadow-lg">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-4 h-4 bg-red-600 rounded-full radar-ping"></div>
-                <span class="text-2xl font-black tracking-tighter text-red-500 uppercase">Red Radar 紅色雷達</span>
+            <div class="flex items-center gap-3">
+                <div class="relative flex items-center justify-center w-4 h-4">
+                    <div class="w-3 h-3 bg-red-600 rounded-full radar-ping"></div>
+                </div>
+                <span class="text-xl font-black tracking-tighter text-white uppercase italic">Red Radar 紅色雷達</span>
             </div>
-            <div class="text-xs text-gray-400 font-mono hidden md:block">STATUS: MONITORING LIVE...</div>
+            <div class="text-xs text-gray-400 font-mono hidden md:block">SYSTEM STATUS: <span class="text-green-400">MONITORING LIVE</span></div>
         </div>
     </nav>
 
-    <header class="py-16 px-4 text-center">
-        <h2 class="text-4xl md:text-6xl font-extrabold mb-4">雙眼雪亮，看透<span class="text-red-600 text-glow">滲透</span></h2>
-        <p class="text-gray-400">「紅色雷達：民主自由之眼」— 跨海峽政經敘事同步監測系統</p>
+    <header class="py-16 px-4 text-center bg-white border-b border-gray-200">
+        <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">雙眼雪亮，看透<span class="text-red-600">滲透</span></h2>
+        <p class="text-slate-500 text-lg max-w-2xl mx-auto">「紅色雷達：民主自由之眼」— 跨海峽政經敘事同步監測系統</p>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 pb-20">
+    <main class="max-w-6xl mx-auto px-4 pb-20 mt-12">
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
-                <div class="text-gray-500 text-sm mb-1 text-center">敘事同步追蹤中</div>
-                <div class="text-3xl font-bold text-red-500 text-center uppercase tracking-widest">Active</div>
+        <div class="flex justify-center mb-12">
+            <div class="bg-white px-8 py-4 rounded-full shadow-sm border border-gray-200 flex items-center gap-4">
+                <span class="text-slate-400 text-sm font-bold uppercase tracking-widest">敘事同步追蹤狀態</span>
+                <span class="text-2xl font-black text-red-600 animate-pulse uppercase">Active</span>
             </div>
         </div>
 
-        <section class="mt-12">
-            <h3 class="text-2xl font-bold border-l-4 border-red-600 pl-4 mb-8">當前紅色敘事追蹤 (Latest Red Narratives)</h3>
+        <section>
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-8 w-2 bg-red-600"></div>
+                <h3 class="text-2xl font-extrabold text-slate-900">當前紅色敘事追蹤 (Latest Red Narratives)</h3>
+            </div>
 
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden mb-6 hover:border-red-500/50 transition shadow-2xl">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="bg-red-900/50 text-red-500 text-xs px-2 py-1 rounded font-bold uppercase tracking-widest border border-red-700">源頭：國台辦記者會</span>
-                        <span class="text-gray-500 text-xs font-mono">DATE: 2026-04-01</span>
+            <div class="bg-white border border-gray-200 rounded-3xl overflow-hidden mb-8 shadow-xl hover:shadow-2xl transition-shadow">
+                <div class="p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="bg-red-50 text-red-600 text-xs px-3 py-1 rounded-full font-bold border border-red-100 uppercase">源頭：國台辦記者會</span>
+                        <span class="text-slate-400 text-xs font-mono">DATE: 2026-04-01</span>
                     </div>
                     
-                    <h4 class="text-xl font-bold mb-2">國台辦定調鄭麗文訪中：兩岸的事是家裡事，商量著辦</h4>
+                    <h4 class="text-2xl font-black text-slate-900 mb-4">國台辦定調鄭麗文訪中：兩岸的事是家裡事，商量著辦</h4>
                     
-                    <div class="flex flex-wrap gap-4 mb-4">
-                        <a href="https://archive.is/2026.04.03-063313/https://www.gwytb.gov.cn/m/speech/202604/t20260401_12758540.htm" target="_blank" class="text-green-400 text-sm hover:underline italic font-mono">
-                            [ 安全存檔連結 🛡️ ]
+                    <div class="flex flex-col md:flex-row gap-4 mb-8 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                        <a href="https://archive.is/2026.04.03-063313/https://www.gwytb.gov.cn/m/speech/202604/t20260401_12758540.htm" target="_blank" class="flex items-center gap-2 text-emerald-600 font-bold hover:text-emerald-700 transition">
+                            <span class="text-xl">🛡️</span> [ 安全存檔連結 ]
                         </a>
-                        <a href="https://www.gwytb.gov.cn/m/speech/202604/t20260401_12758540.htm" target="_blank" class="text-red-900 text-xs hover:underline italic font-mono opacity-50">
-                            ( 原始連結 - 訪問受監控 ⚠️ )
+                        <div class="hidden md:block w-px h-6 bg-gray-200"></div>
+                        <a href="https://www.gwytb.gov.cn/m/speech/202604/t20260401_12758540.htm" target="_blank" class="flex items-center gap-2 text-red-600 font-black hover:text-red-800 transition">
+                            <span class="text-xl">⚠️</span> [ 警告！原始連結 - 訪問受監控 ]
                         </a>
                     </div>
                     
-                    <div class="mt-4 grid md:grid-cols-2 gap-6">
-                        <div class="bg-black/50 p-4 rounded-lg border border-red-900/30">
-                            <h5 class="text-red-400 text-sm font-bold mb-2 uppercase tracking-tighter">🚨 關鍵字同步標註：</h5>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h5 class="text-slate-900 text-sm font-black mb-3 flex items-center gap-2">
+                                <span class="w-2 h-2 bg-red-600 rounded-full"></span> 🚨 關鍵字同步標註：
+                            </h5>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-red-600/20 border border-red-600/50 text-red-400 px-2 py-1 rounded text-xs font-mono">"家裡事"</span>
-                                <span class="bg-red-600/20 border border-red-600/50 text-red-400 px-2 py-1 rounded text-xs font-mono">"認同九二共識"</span>
-                                <span class="bg-red-600/20 border border-red-600/50 text-red-400 px-2 py-1 rounded text-xs font-mono">"反台獨"</span>
+                                <span class="bg-red-600 text-white px-3 py-1 rounded-lg text-xs font-bold font-mono">"家裡事"</span>
+                                <span class="bg-red-600 text-white px-3 py-1 rounded-lg text-xs font-bold font-mono">"認同九二共識"</span>
+                                <span class="bg-red-600 text-white px-3 py-1 rounded-lg text-xs font-bold font-mono">"反台獨"</span>
                             </div>
                         </div>
                         
-                        <div class="bg-black/50 p-4 rounded-lg border border-blue-900/30">
-                            <h5 class="text-blue-400 text-sm font-bold mb-2 uppercase tracking-tighter">🧠 邏輯漏洞與事實拆解：</h5>
-                            <p class="text-gray-400 text-sm leading-relaxed">
-                                <span class="text-white font-bold">【扭曲事實】</span>：國台辦將「九二共識」與「和平」強制掛鉤。事實上，台海緊張主因是中共單方面改變現狀、頻繁動用軍機侵擾台灣 ADIZ，而非台灣拒絕對話。<br><br>
-                                <span class="text-white font-bold">【邏輯漏洞】</span>：稱兩岸是「家裡事」，意圖規避聯合國憲章對於主權國家的保護，並排除國際社會的合法介入。這是一種典型的「法律戰」陷阱。<br><br>
-                                <span class="text-white font-bold">【敘事意圖】</span>：在台灣內部製造「只有特定政黨能與中方對話」的假象，藉此分化社會，並對軍購預算案施加輿論壓力。
-                            </p>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <h5 class="text-slate-900 text-sm font-black mb-4 flex items-center gap-2">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full"></span> 🧠 邏輯漏洞與事實拆解：
+                            </h5>
+                            <div class="space-y-4">
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    <strong class="text-slate-900 block mb-1">【扭曲事實】</strong>
+                                    將「九二共識」與「和平」強制掛鉤。事實上，台海緊張主因是中共頻繁動用軍機侵擾台灣 ADIZ，而非台灣拒絕對話。其敘事試圖將「施暴者」包裝成「和平締造者」。
+                                </p>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    <strong class="text-slate-900 block mb-1">【邏輯漏洞】</strong>
+                                    稱兩岸是「家裡事」，意圖規避聯合國憲章對於主權國家的保護，排除國際介入。這是典型的「法律戰」陷阱。
+                                </p>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    <strong class="text-slate-900 block mb-1">【敘事意圖】</strong>
+                                    在台灣內部製造「只有特定政黨能對話」的假象，藉此分化社會，並對軍購預算施壓。
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -85,8 +104,9 @@
         </section>
     </main>
 
-    <footer class="border-t border-gray-800 p-8 text-center text-gray-600 text-xs font-mono">
-        &copy; 2026 RED RADAR - MIT LICENSE. PRO-DEMOCRACY OPEN DATA PROJECT.
+    <footer class="bg-white border-t border-gray-200 p-12 text-center">
+        <p class="text-slate-400 text-xs font-mono">&copy; 2026 RED RADAR - MIT LICENSE. PRO-DEMOCRACY OPEN DATA PROJECT.</p>
+        <p class="text-slate-300 text-[10px] mt-2 italic">此計畫旨在提升台灣社會對於「認知協作」的辨識力與民主韌性</p>
     </footer>
 
 </body>
