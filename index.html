@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紅色雷達 Red Radar | 民主自由之眼</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .radar-ping::after {
+            content: ''; position: absolute; width: 100%; height: 100%;
+            border: 2px solid #ef4444; border-radius: 50%;
+            animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite; opacity: 0;
+        }
+        @keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } 0% { transform: scale(1); opacity: 0.5; } }
+    </style>
+</head>
+<body class="bg-black text-gray-100 font-sans">
+
+    <nav class="border-b border-red-900 bg-gray-900 p-4 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-4 h-4 bg-red-600 rounded-full radar-ping"></div>
+                <span class="text-2xl font-black tracking-tighter text-red-500 uppercase">Red Radar 紅色雷達</span>
+            </div>
+            <div class="text-xs text-gray-400 font-mono hidden md:block">STATUS: MONITORING LIVE...</div>
+        </div>
+    </nav>
+
+    <header class="py-16 px-4 text-center">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-4">雙眼雪亮，看透<span class="text-red-600 text-glow">滲透</span></h2>
+        <p class="text-gray-400">「紅色雷達：民主自由之眼」— 跨海峽政經敘事同步監測系統</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 pb-20">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+                <div class="text-gray-500 text-sm mb-1 text-center">敘事同步追蹤中</div>
+                <div class="text-3xl font-bold text-red-500 text-center uppercase tracking-widest">Active</div>
+            </div>
+            </div>
+
+        <section class="mt-12">
+            <h3 class="text-2xl font-bold border-l-4 border-red-600 pl-4 mb-8">當前紅色敘事追蹤 (Latest Red Narratives)</h3>
+
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden mb-6 hover:border-red-500/50 transition shadow-2xl">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-red-900/50 text-red-500 text-xs px-2 py-1 rounded font-bold uppercase tracking-widest border border-red-700">源頭：國台辦/官媒</span>
+                        <span class="text-gray-500 text-xs font-mono">DATE: 2026-04-03</span>
+                    </div>
+                    
+                    <h4 class="text-xl font-bold mb-2">請在此填入新聞標題（例如：某某報導...）</h4>
+                    <a href="請在此填入新聞連結" target="_blank" class="text-blue-400 text-sm hover:underline italic font-mono">SOURCE LINK 🔗</a>
+                    
+                    <div class="mt-4 grid md:grid-cols-2 gap-6">
+                        <div class="bg-black/50 p-4 rounded-lg border border-red-900/30">
+                            <h5 class="text-red-400 text-sm font-bold mb-2 uppercase tracking-tighter">🚨 關鍵字同步標註 (Key Terms)：</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-red-600/20 border border-red-600/50 text-red-400 px-2 py-1 rounded text-xs font-mono">"綠色恐怖"</span>
+                                <span class="bg-red-600/20 border border-red-600/50 text-red-400 px-2 py-1 rounded text-xs font-mono">"司法不公"</span>
+                                <span class="bg-red-600/20 border border-red-600/50 text-red-400 px-2 py-1 rounded text-xs font-mono">"人權迫害"</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-black/50 p-4 rounded-lg border border-blue-900/30">
+                            <h5 class="text-blue-400 text-sm font-bold mb-2 uppercase tracking-tighter">🧠 邏輯漏洞與事實拆解 (Analysis)：</h5>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                <span class="text-white font-bold">【扭曲事實】</span>：在此輸入該文章如何誤導大眾...<br>
+                                <span class="text-white font-bold">【敘事意圖】</span>：在此輸入這篇文章想達到的政治目的...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+
+    <footer class="border-t border-gray-800 p-8 text-center text-gray-600 text-xs font-mono">
+        &copy; 2026 RED RADAR - MIT LICENSE. PRO-DEMOCRACY OPEN DATA PROJECT.
+    </footer>
+
+</body>
+</html>
